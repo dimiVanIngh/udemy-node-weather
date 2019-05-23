@@ -21,6 +21,11 @@ footer {
     padding: 16px 0
 }
 
+footer .api-reference{
+    font-size: 12px;
+    color: mediumpurple;
+}
+
 header {
     margin-top: 16px;
     margin-bottom: 48px;
