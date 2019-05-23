@@ -4,7 +4,10 @@ function executeWeatherResponse({currently, daily}) {
     let currentDegrees = currently.temperature
     let preciperationChance = currently.precipProbability
     let summaryToday = daily.data[0].summary;
-    return `${summaryToday} It is currently ${currentDegrees}° out. There is a ${preciperationChance}% chance of rain.`
+    return {
+        summary: `${summaryToday} It is currently ${currentDegrees}°. There is a ${preciperationChance}% chance of rain.`,
+        dailyBetween: `Daily temperatue will be between ${daily.data[0].temperatureLow}° and ${daily.data[0].temperatureHigh}°`
+    }
 }
 
 const forecast = (longitude, latitude, callback) => {
