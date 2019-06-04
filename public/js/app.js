@@ -3,6 +3,8 @@ const search = document.querySelector('input')
 const firstMessage = document.querySelector('#message-1')
 const secondMessage = document.querySelector('#message-2')
 const thirdMessage = document.querySelector('#message-3')
+const isItFriday = document.querySelector('#friday')
+const notFriday = document.querySelector('#notFriday')
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -23,3 +25,7 @@ weatherForm.addEventListener('submit', (e) => {
         })
     })
 })
+
+new Date().getDay() === 5
+    ? isItFriday.textContent = 'YepYep, TW today'
+    : notFriday.textContent = 'Not yet, check again tomorrow!'
